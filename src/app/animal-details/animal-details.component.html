@@ -1,0 +1,21 @@
+<div>
+  <br>
+  <br>
+  <h5>(Angular Oneway Databinding)</h5>  
+    <h5><span>Select a bread:</span></h5>
+  <select id="dropdown" (change)="selectChangeHandler($event)">
+     <option>Select value--</option>
+      <option  *ngFor="let animal of animals" >{{animal.name}}</option>      
+  </select>
+  <br>
+  <br> 
+
+  <div *ngIf="selected" class="card"  style="width: 18rem;">
+    <img src={{selectedAnimalSrc}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{selectedAnimalName}}</h5>
+      <p class="card-text">{{selectedAnimalDetails}}</p>
+    </div>
+  </div>
+
+</div>

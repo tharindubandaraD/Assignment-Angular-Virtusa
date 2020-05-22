@@ -1,0 +1,14 @@
+<div *ngFor="let car of Cars" >
+    <div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{car.brand}}</h5>
+          <p class="card-text">{{car.modelName}}</p>         
+            <button (click)="sendValues(car.descriptions)">Load</button>           
+        </div>
+      </div>
+    </div>
+</div>
+<div>
+    <app-car-details *ngIf="loadComponent" [brandname]="descriptions"></app-car-details>
+</div>
